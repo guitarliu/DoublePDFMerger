@@ -14,3 +14,6 @@ C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\obj\Debug\DoublePDFMerg
 C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\obj\Debug\DoublePDFMerger.csproj.CoreCompileInputs.cache
 C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\obj\Debug\DoublePDFMerger.exe
 C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\obj\Debug\DoublePDFMerger.pdb
+C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\bin\Debug\Icons\Logo.png
+C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\obj\Debug\DoublePDFMerger_Content.g.cs
+C:\Users\liuyong\Desktop\DoublePDFMerger\DoublePDFMerger\bin\Debug\Icons\Upload.png
