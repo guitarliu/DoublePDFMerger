@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/logo.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/upload.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/docicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/closeicon.png")]
 
 

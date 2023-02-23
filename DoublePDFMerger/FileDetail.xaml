@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="DoublePDFMerger.FileDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoublePDFMerger"
+             mc:Ignorable="d" 
+             x:Name="this"
+             d:DesignWidth="300" Height="150"
+             Background="WhiteSmoke">
+    <Grid Margin="0,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/> <!--For Icon-->
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="\Icons\DocIcon.png" 
+               VerticalAlignment="Top" 
+               HorizontalAlignment="Left"
+               Stretch="Uniform"
+               Width="25"/>
+        <Grid
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--FileName & Size-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    TextTrimming="CharacterEllipsis"
+                    MaxHeight="100"
+                    FontWeight="Bold"
+                    Text="{Binding FileName, ElementName=this,
+                    FallbackValue=FileName, TargetNullValue=FileName}"/>
+
+                <TextBlock
+                    Grid.Column="1"
+                    Padding="5,0"
+                    Text="{Binding FileSize, ElementName=this,
+                    FallbackValue=FileSizeInMb, TargetNullValue=FileSizeInMb}"/>
+            </Grid>
+            
+            <!--Cancel Button-->
+            <Button
+                BorderThickness="0"
+                Background="Transparent"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center">
+                <Image 
+                    Source="\Icons\CloseIcon.png"
+                    Height="10"
+                    Stretch="Uniform"/>
+            </Button>
+
+            <ProgressBar
+                Name="pb"
+                Grid.Row="1"
+                Height="8"
+                Foreground="#47BDFF"
+                Value="{Binding UploadProgress, ElementName=this}"/>
+
+            <TextBlock
+                Grid.Row="2">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Text" Value="{Binding FallbackValue,
+                            ElementName=pb, StringFormat={}{0:#,#.0% done}}"/>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+
+    </Grid>
+</UserControl>
